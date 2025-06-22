@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1 id="titolo">Ciao!</h1>
-    <button id="btn">Clicca</button>
+<h1>Ciao, mondo!</h1>
+  <p>Clicca il bottone per vedere un messaggio JavaScript:</p>
+  <button onclick="mostraMessaggio()">Cliccami</button>
 
-    <script>
-      document.getElementById("btn").addEventListener("click", () => {
-        document.getElementById("titolo").textContent = "Hai cliccato!";
-      });
-    </script>
+  <script>
+    function mostraMessaggio() {
+      alert('Benvenuto nella tua pagina di test con stile!');
+    }
+  </script>
   </body>
 </html>
