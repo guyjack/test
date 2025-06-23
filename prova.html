@@ -1,58 +1,55 @@
 <!DOCTYPE html>
-<html>
- <head>
+<html lang="it">
+<head>
   <meta charset="UTF-8">
-  <title>Pagina di Test</title>
+  <title>Viaggio da Sogno</title>
   <style>
     body {
-      background-color: #f0f8ff;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-
-    h1 {
-      color: #2e8b57;
-      font-size: 2.5em;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 1.2em;
-      background-color: #2e8b57;
+      background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e'); /* Spiaggia tropicale */
+      background-size: cover;
+      background-position: center;
       color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding-top: 100px;
     }
-
-    button:hover {
-      background-color: #3cb371;
+    #messaggio {
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 30px;
+      border-radius: 10px;
+      font-size: 1.5em;
+      max-width: 600px;
+    }
+    h1 {
+      background-color: rgba(0, 0, 0, 0.4);
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
     }
   </style>
 </head>
-  <body>
-<h1>Ciao, mondo!</h1>
-  <p>Anagrafica</p>
+<body>
+  <h1>Ciao, viaggiatore 🌍</h1>
+  <p id="messaggio"></p>
 
-   <script>
-let nome = "Giuseppe"
-let destination="Florida"
+  <script>
+    let nome = "Giuseppe";
+    let destination = "Florida";
+    let budget = prompt("Inserisci il tuo budget per il viaggio:");
+    budget = Number(budget);
 
-// Chiediamo all'utente di inserire il budget
-let budget = prompt("Inserisci il tuo budget per il viaggio:");
-budget = Number(budget); // Convertiamo da stringa a numero
+    let messaggio = "";
 
-if (budget >= 1500) {
-  console.log(`Puoi prenotare il tuo viaggio in ${destination}`);
-} else {
-  console.log(`Mi sa che serve risparmiare un po' prima di andare in ${destination}`);
+    if (budget >= 1500) {
+      messaggio = `Bravo ${nome}, puoi prenotare il tuo viaggio in ${destination}! 🏖️`;
+    } else if (budget >= 1000) {
+      messaggio = `${nome}, se trovi un'offerta, potresti riuscire ad andare in ${destination}. ✈️`;
+    } else {
+      messaggio = `${nome}, mi sa che serve risparmiare un po' prima di andare in ${destination}... 💸`;
+    }
 
-}
-
-</script>
-
-
-  </body>
+    document.getElementById("messaggio").innerText = messaggio;
+  </script>
+</body>
 </html>
