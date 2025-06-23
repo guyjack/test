@@ -35,15 +35,24 @@
   <body>
 <h1>Ciao, mondo!</h1>
   <p>Anagrafica</p>
-  <button onclick="somma()">Cliccami</button>
 
-<script>
+   <script>
 let nome = "Giuseppe"
-let eta = 50
 let destination="Florida"
-function somma () {
-console.log(`mi chiamo ${nome}  , ho ${eta} anni e mi piacerebbe fare un bel viaggio in ${destination}`);
-</script>`
+
+// Chiediamo all'utente di inserire il budget
+let budget = prompt("Inserisci il tuo budget per il viaggio:");
+budget = Number(budget); // Convertiamo da stringa a numero
+
+if (budget >= 1500) {
+  console.log(`Puoi prenotare il tuo viaggio in ${destination}`);
+} else {
+  console.log(`Mi sa che serve risparmiare un po' prima di andare in ${destination}`);
+
 }
+
+</script>
+
+
   </body>
 </html>
